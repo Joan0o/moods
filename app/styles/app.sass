@@ -1,0 +1,55 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto')
+    
+$primary-color: #421b9b
+$secondary-color: #a06ee1
+
+@import _user-circle
+
+$font-stack: 'Roboto', sans-serif
+    
+body
+    background-color: $primary-color
+    font-family: $font-stack
+    color: white !important
+    text-align: center
+    vertical-align: middle
+
+.container
+    padding: 1%
+    background-color: $secondary-color
+    width: calc(100vw / 2)
+    height: calc(100vh / 2)
+    margin: 0 auto
+    box-shadow: 6px 6px 16px 5px rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    -webkit-transform: translate(-50%, -50%)   
+    min-height: 58%
+    
+a
+    font-family: $font-stack !important
+    color: white !important
+
+.circle-list 
+    display: flex
+    align-items: center
+    justify-content: center
+
+.links *
+    text-decoration: none !important
+    position: absolute
+    right: 0
+    bottom: 0
+    margin: 50px
+
+.title
+    position: absolute
+    top: 10%
+    left: 50%
+    transform: translate(-10%, -10%)
+    -ms-transform: translate(-10%, -10%)
+    -webkit-transform: translate(-10%, -10%) 

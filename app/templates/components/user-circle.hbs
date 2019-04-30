@@ -1,0 +1,11 @@
+<div 
+    class="user-circle {{if this.selected "selected"}}" 
+    onmouseover={{action "toggleImageHover"}}
+    onmouseout={{action "toggleImageHover"}}
+    role="button"
+    >
+    <img src={{this.user.image}} alt="">
+    <span class="name">{{this.user.name}}
+        - <small class="mood">{{this.user.mood}}</small>
+    </span>
+</div>

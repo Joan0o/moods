@@ -1,0 +1,11 @@
+<h2>Today's mood</h2>
+    <hr>
+
+    <article class="circle-list">
+        {{#each this.model as |user|}}
+            <UserCircle @user={{user}}></UserCircle>
+        {{/each}}
+    </article>
+    <hr>
+    <br>
+<h3>So ... how are u feeling?</h3>
