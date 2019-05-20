@@ -4,14 +4,13 @@
   </h1>
 {{/link-to}}
 <div class="container">
-  <div class="menu">
+    <Main></Main>
     <div class="links">
-      {{#link-to "contact" class="menu-contact"}}
-        Contact me
-      {{/link-to}}
+        {{#link-to "contact" class="menu-contact"}}
+            Contact me
+        {{/link-to}}
     </div>
-  </div>
-  <div class="body">
-    {{outlet}}
-  </div>
+</div>
+<div class="container">
+    <Charts></Charts>
 </div>

@@ -1,9 +1,8 @@
-<h2>frens mood</h2>
 <img class="spotify-logo"/>
 <hr>
 <article class="circle-list">
-    {{#each this.model as |user|}}
-        <UserCircle @user={{user}}></UserCircle>
+    {{#each this.model as |item|}}
+        <UserCircle @user={{item}}></UserCircle>
     {{/each}}
 </article>
 <hr>

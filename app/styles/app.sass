@@ -21,15 +21,11 @@ body
     background-color: $secondary-color
     width: calc(100vw / 2)
     min-height: calc(100vh / 1.5)
-    margin: 0 auto
+    min-width: calc(100vh / 2)
+    margin: 20px auto
     box-shadow: 6px 6px 16px 5px rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-    position: absolute
-    top: 50%
     left: 50%
-    transform: translate(-50%, -50%)
-    -ms-transform: translate(-50%, -50%)
-    -webkit-transform: translate(-50%, -50%)   
-    
+
 a
     font-family: $font-stack !important
     color: white !important
@@ -41,10 +37,11 @@ a
 
 .links *
     text-decoration: none !important
-    position: absolute
-    right: 0
+    position: fixed
+    margin-right: 0 !important
     bottom: 0
-    margin: 50px
+    left: 50%
+    transform: translateX(-50%)
 
 .title
     margin-top: 2%
