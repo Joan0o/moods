@@ -1,5 +1,5 @@
-import DS from 'ember-data';
+import FirestoreAdapter from 'emberfire/adapters/firestore';
 
-export default DS.JSONAPIAdapter.extend({
-    namespace: 'api'
+export default FirestoreAdapter.extend({
+    enablePersistence: true,
 });

@@ -1,0 +1,12 @@
+<img class="spotify-logo"/>
+<hr>
+<article class="circle-list">
+    {{#each this.model as |item|}}
+        <UserCircle @user={{item}}></UserCircle>
+    {{/each}}
+</article>
+<hr>
+<br>
+<h3>So ... how are u feeling?</h3>
+
+<MoodEdition></MoodEdition>
