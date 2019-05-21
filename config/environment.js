@@ -2,6 +2,16 @@
 
 module.exports = function(environment) {
   let ENV = {
+
+    firebase: {
+      apiKey: "AIzaSyCK-ezBJbiFgrk8rJ3wH_9jYvv0X0tXwT8",
+      authDomain: "moods-250e0.firebaseapp.com",
+      databaseURL: "https://moods-250e0.firebaseio.com",
+      projectId: "moods-250e0",
+      storageBucket: "moods-250e0.appspot.com",
+      messagingSenderId: "70301805492",
+      appId: "1:70301805492:web:f3afcee964e85e62"
+    },
     modulePrefix: 'mood',
     environment,
     rootURL: '/',

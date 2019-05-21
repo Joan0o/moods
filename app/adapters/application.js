@@ -1,5 +1,7 @@
-import FirestoreAdapter from 'emberfire/adapters/firestore';
+import FirebaseAdapter from 'emberfire/adapters/firebase';
 
-export default FirestoreAdapter.extend({
+export default FirebaseAdapter.extend({
+    // Uncomment the following lines to enable offline persistence and multi-tab support
     enablePersistence: true,
+    persistenceSettings: { experimentalTabSynchronization: true }
 });

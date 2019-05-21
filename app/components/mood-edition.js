@@ -1,13 +1,39 @@
 import Component from '@ember/component';
 
 export default Component.extend({
+
+    store: Ember.inject.service(),
+
+    change_path: [],
+    is_mood_changing: false,
+
     actions: {
-        onChange() {
+        change_mood() {
             const val = this.element.querySelector('input').value;
             //  Get the slider value, scale it from percentage to 0-1.
 
+
+            if(this.is_mood_changing)
+                this.change_path.push(val);
+
             const scale = parseInt(val, 10) / 100;
             this.scaleSmile(scale);
+        },
+        startMoodChange() {
+            this.set("is_mood_changing", true);
+        },
+        storeMood() {
+            this.set("is_mood_changing", false);
+            console.log(this.change_path);
+
+            let newMood = this.store.createRecord('mood',{
+                user: Math.random(10),
+                path: JSON.stringify(this.change_path)
+            });
+
+            newMood.save();
+
+            this.set("change_path", []);
         }
     },
     interpolateColor(color1, color2, scale) {
