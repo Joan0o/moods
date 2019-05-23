@@ -12,8 +12,8 @@
 </svg>
 <div class="slidecontainer">
   <input type="range" id="myRange"
-         onclick={{action "startMoodChange"}}
-         onmouseup={{action "storeMood"}}
+         onmousedown={{action "startMoodChange"}}
+         onmouseup={{action "endMoodChange"}}
          oninput={{action "change_mood"}}
          min="1"
          max="100"

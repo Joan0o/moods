@@ -1,11 +1,8 @@
 import Component from '@ember/component';
-import { inject } from '@ember/service';
 
 export default Component.extend({
 
-  store: inject.service(),
-
-  change_path: null,
+  change_path: [],
   is_mood_changing: false,
 
   actions: {
@@ -22,19 +19,18 @@ export default Component.extend({
     startMoodChange() {
       this.set("is_mood_changing", true);
     },
-    storeMood() {
+    endMoodChange() {
       this.set("is_mood_changing", false);
 
-      let newMood = this.store.createRecord('mood', {
+      this.storeMood({
         user: Math.random(10),
         path: JSON.stringify(this.change_path)
       });
 
-      newMood.save();
-
       this.set("change_path", []);
     }
   },
+
   interpolateColor(color1, color2, scale) {
     const r1 = parseInt(color1.substr(1, 2), 16);
     const g1 = parseInt(color1.substr(3, 2), 16);
