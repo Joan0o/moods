@@ -1,22 +1,22 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-    classNames: ['list-filter'],
-    value: '',
+  classNames: ['list-filter'],
+  value: '',
 
-    init(){
-        this._super(...arguments);
-        this.filter('').then((results) => this.set('results', results))
-    },
+  init() {
+    this._super(...arguments);
+    this.filter('').then((results) => this.set('results', results))
+  },
 
-    actions: {
-        handleFiltreEntry(){
-            let filterInputValue = this.value;
-            let filterAction = this.filter;
-            filterAction(filterInputValue)
-            .then((filterResults) => {
-                this.set('results', filterResults)
-            })
-        }
+  actions: {
+    handleFiltreEntry() {
+      let filterInputValue = this.value;
+      let filterAction = this.filter;
+      filterAction(filterInputValue)
+        .then((filterResults) => {
+          this.set('results', filterResults)
+        })
     }
+  }
 });
